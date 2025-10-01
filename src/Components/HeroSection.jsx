@@ -159,7 +159,7 @@ const HeroSection = () => {
     ];
 
     return (
-        <div className="relative w-full bg-white pt-16 pb-20 text-center lg:py-28">
+        <div className="relative w-full bg-white pt-9 pb-20 text-center lg:py-12">
             <div
                 aria-hidden="true"
                 className="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
@@ -205,7 +205,7 @@ const HeroSection = () => {
                             Start Free Assessment <MoveRight size={20} />
                         </a>
                         <a
-                            href="#"
+                            href="/colleges"
                             className="rounded-lg border border-gray-300 bg-white px-6 py-3.5 text-base font-semibold text-gray-900 shadow-sm transition hover:bg-gray-50"
                         >
                             Explore Colleges

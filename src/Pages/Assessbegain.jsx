@@ -82,7 +82,7 @@ const Assessbegain = () => {
     };
 
     return (
-        <section className="bg-slate-50 font-sans py-20 px-4 mt-[100px]">
+        <section className="bg-slate-50 font-sans px-4 mt-[30px]">
             <motion.div 
                 className="max-w-5xl mx-auto text-center"
                 initial={{ opacity: 0, y: 20 }}
@@ -91,7 +91,7 @@ const Assessbegain = () => {
             >
                 {/* Top Icon */}
                 <div className="flex justify-center mb-6">
-                    <div className="p-4  bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] rounded-2xl shadow-lg">
+                    <div className="p-4  bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] rounded-2xl mt-[25px] shadow-lg">
                         <BrainIcon />
                     </div>
                 </div>

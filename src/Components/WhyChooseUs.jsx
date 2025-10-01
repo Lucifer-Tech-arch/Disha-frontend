@@ -1,5 +1,4 @@
 import { SiTicktick } from "react-icons/si";
-import { useNavigate } from "react-router-dom";
 
 // SVG Icon for the graduation cap
 const GraduationCapIcon = () => (
@@ -24,7 +23,6 @@ const WhyChooseUs = () => {
     "Access all information in one convenient platform",
     "Stay updated with important deadlines and dates",
   ];
-  const navigate = useNavigate();
 
   return (
     <section className="bg-white font-sans py-20 px-4">
@@ -60,7 +58,7 @@ const WhyChooseUs = () => {
             <p className="opacity-90 mb-8">
               Take our comprehensive assessment and discover your ideal academic path in just 10 minutes.
             </p>
-            <button onClick={() => navigate("/assessment/questions")} className="bg-white cursor-pointer text-blue-600 font-bold py-3 px-6 rounded-lg flex items-center gap-3 transition-transform duration-300 ease-in-out hover:scale-105 shadow-md">
+            <button className="bg-white cursor-pointer text-blue-600 font-bold py-3 px-6 rounded-lg flex items-center gap-3 transition-transform duration-300 ease-in-out hover:scale-105 shadow-md">
                 <p className="bg-gradient-to-r from-[#2A65F5] font-sans to-[#19D7B5] bg-clip-text text-transparent">Begin Assessment</p>
               
               <ArrowRightIcon />

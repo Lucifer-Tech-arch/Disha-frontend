@@ -35,7 +35,7 @@ const Navbar = () => {
     )
 
     return (
-        <div className='flex items-center justify-between py-3 px-4 w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
+        <div className='flex items-center justify-between py-2 px-4 w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
             <div className='flex items-center gap-2'>
                 <Link to='/'><img src={Logo} className='w-14' alt="Logo" /></Link>
                 <div>

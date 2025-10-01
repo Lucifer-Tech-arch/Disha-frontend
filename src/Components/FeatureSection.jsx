@@ -1,6 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-// SVG Icon Components (you can also move these to separate files if you prefer)
+// SVG Icon Components (from your code)
 const BrainIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
@@ -50,13 +51,15 @@ const features = [
     },
 ];
 
-
 const FeatureSection = () => {
+    // Duplicate the features array for a seamless loop
+    const duplicatedFeatures = [...features, ...features];
+
     return (
-        <section className="bg-gray-50/50 w-full py-10">
+        <section className="bg-gray-50/50 w-full py-20 overflow-x-hidden">
             <div className="container mx-auto px-4">
                 {/* Section Header */}
-                <div className="text-center mb-12">
+                <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                         Everything You Need to <span className="bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] bg-clip-text text-transparent">Succeed</span>
                     </h2>
@@ -64,15 +67,32 @@ const FeatureSection = () => {
                         Our comprehensive platform guides you through every step of your educational journey.
                     </p>
                 </div>
+            </div>
 
-                {/* Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {features.map((feature, index) => (
+            {/* Features Scroller */}
+            <div className="relative w-full">
+                 {/* Gradient fades for the edges */}
+                 <div className="absolute top-0 bottom-0 left-0 w-24 z-10 bg-gradient-to-r from-gray-50/50 to-transparent"></div>
+                 <div className="absolute top-0 bottom-0 right-0 w-24 z-10 bg-gradient-to-l from-gray-50/50 to-transparent"></div>
+
+                <motion.div
+                    className="flex gap-8" // Increased gap to match grid gap
+                    animate={{
+                        x: ['0%', '-100%'],
+                    }}
+                    transition={{
+                        ease: 'linear',
+                        duration: 35, // Adjust duration to control speed
+                        repeat: Infinity,
+                    }}
+                >
+                    {duplicatedFeatures.map((feature, index) => (
                         <div
                             key={index}
-                            className="relative rounded-2xl cursor-pointer p-[2px] bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(42,101,245,0.4),0_0_40px_rgba(25,215,181,0.3)]"
+                            // Restored hover effects, transition, and fixed width
+                            className="flex-shrink-0 w-73 relative rounded-2xl cursor-pointer p-[2px] bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(42,101,245,0.4),0_0_40px_rgba(25,215,181,0.3)]"
                         >
-                            <div className="bg-white rounded-2xl p-5 h-full transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#2A65F5]/10 hover:to-[#19D7B5]/10">
+                            <div className="bg-white rounded-2xl p-6 h-full transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-[#2A65F5]/10 hover:to-[#19D7B5]/10">
                                 <div className="bg-blue-100/70 inline-block p-3 rounded-xl mb-6">
                                     {feature.icon}
                                 </div>
@@ -80,10 +100,8 @@ const FeatureSection = () => {
                                 <p className="text-gray-500 leading-relaxed">{feature.description}</p>
                             </div>
                         </div>
-
-
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

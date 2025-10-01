@@ -80,7 +80,7 @@ const StrengthItem = ({ name, description, score, isStrongest, icon }) => {
 // --- Main Recommandations Component ---
 const Recommandations = () => {
     return (
-        <div className="min-h-screen bg-gray-50 mt-[100px] font-sans flex flex-col items-center justify-center p-4">
+        <div className="min-h-screen bg-gray-50 mt-[40px] font-sans flex flex-col items-center justify-center p-4">
             <main className="max-w-4xl w-full mx-auto">
                 {/* Header Section */}
                 <header className="text-center mb-10">
