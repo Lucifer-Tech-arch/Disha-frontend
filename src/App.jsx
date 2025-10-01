@@ -12,7 +12,7 @@ import Assessment from './Pages/Assessment';
 import Assessbegain from './Pages/Assessbegain.jsx';
 import Recommandations from './Pages/Recommandations.jsx';
 import Colleges from './Pages/Colleges.jsx';
-import CareerPaths from './Pages/CareerPaths.jsx';
+import CareerPaths from './Pages/Careerpaths.jsx';
 import Dashboard from './Pages/Dashboard';
 import Courses from './Pages/Courses';
 import Calendar from './Pages/Calendar';
