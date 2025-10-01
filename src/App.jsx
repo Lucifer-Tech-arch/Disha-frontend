@@ -3,7 +3,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
-import Scrolltotop from './components/Scrolltotop';
+import Scrolltotop from './Components/Scrolltotop.jsx';
 import ChatBot from './Components/ChatBot.jsx';
 
 // Pages
