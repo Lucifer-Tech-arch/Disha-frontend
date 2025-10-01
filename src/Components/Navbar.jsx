@@ -87,7 +87,7 @@ const Navbar = () => {
             <div className={`fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${visible ? "translate-x-0" : "translate-x-full"}`}>
                 <div className='flex flex-col text-gray-600'>
                     <div onClick={() => setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" className='h-4 rotate-180' fill="bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] bg-clip-text text-transparent">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" className='h-4 rotate-180' fill="#000000">
                             <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
                         </svg>
                         <p className='bg-gradient-to-r from-[#2A65F5] to-[#19D7B5] bg-clip-text text-transparent'>Back</p>
